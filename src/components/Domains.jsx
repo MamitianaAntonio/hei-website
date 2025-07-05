@@ -19,14 +19,14 @@ function Domains() {
 
 
     return (
-        <div className="p-10 bg-gray-100 flex flex-col gap-14">
+        <div className="p-10 bg-gray-100 flex flex-col gap-14 text-blue-950">
             <div className="text-center">
                 <h2 className="text-5xl text-blue-950 font-bold">Domaines</h2>
                 <p>Au cours de vos trois ans de formation, naviguez entre les domaines les plus porteurs du numérique du présent et de l’avenir :</p>
             </div>
             <div className="flex flex-row w-full justify-center gap-7">
                 {domainsList.map((domainsList, index) => (
-                    <div key={index} className=" w-80 p-3 bg-white  rounded-2xl shadow-2xl">
+                    <div key={index} className=" w-80 p-3 bg-white  rounded-2xl hover:shadow-xl">
                         <div className="flex flex-col items-center text-center">
                             <div>
                                 <img src={domainsList.image}
