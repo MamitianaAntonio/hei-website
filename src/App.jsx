@@ -1,6 +1,7 @@
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import Opportunities from "./components/Opporturnities";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Header />
       <About />
+      <Opportunities />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronRight, ChevronLeft } from "react-feather"; // ou autre selon ta lib
+import { ChevronRight, ChevronLeft } from "react-feather";
 
 
 const slides = [
