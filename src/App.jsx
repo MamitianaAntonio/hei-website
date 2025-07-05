@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Opportunities from "./components/Opporturnities";
 import Domains from "./components/Domains";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
       <About />
       <Opportunities />
       <Domains />
+
+      <Footer />
     </>
   );
 }

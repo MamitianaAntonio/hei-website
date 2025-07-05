@@ -34,7 +34,7 @@ function Domains() {
                             </div>
                             <div>
                                 <div>
-                                    <h3 className="text-amber-500 text-xl">{domainsList.title}</h3>
+                                    <h3 className="text-amber-500 text-xl font-semibold">{domainsList.title}</h3>
                                 </div>
                             </div>
                             <div>
