@@ -1,31 +1,79 @@
+import { useEffect, useState } from "react";
+import { ChevronRight, ChevronLeft } from "react-feather"; // ou autre selon ta lib
+
+
+const slides = [
+    {
+        image: "https://hei.school/wp-content/uploads/2024/09/hei-banner-2.webp",
+        title: "Haute École d'Informatique",
+        text: "« L’éducation est l’arme la plus puissante pour changer le monde » – Nelson Mandela. « L’éducation dans l’informatique est une arme très puissante pour lutter contre la pauvreté à Madagascar » – HEI.",
+    },
+    {
+        image: "https://hei.school/wp-content/uploads/2024/09/hei-banner-3.webp",
+        title: "Haute École d'Informatique",
+        text: "Des entreprises partenaires et une équipe pédagogique et administrative qui travaille sans relâche pour la montée en compétences de nos étudiants.",
+    },
+    {
+        image: "https://hei.school/wp-content/uploads/2024/09/hei-banner-1.webp",
+        title: "Haute École d'Informatique",
+        text: "Une infrastructure de qualité et un programme pédagogique qui répond au besoin du marché pour l’employabilité de nos étudiants.",
+    },
+];
+
 function Header() {
-    const bouton = ["Inscrivez-vous ici", "Emploi du temps", "Programme pédagogique"];
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % slides.length);
+        }, 8000);
+        return () => clearInterval(interval);
+    }, []);
+
+
+    const { image, title, text } = slides[current];
 
     return (
-        <header className="min-h-screen w-screen flex flex-col items-center justify-center text-center gap-14 px-10 h-screen bg-cover bg-center bg-blend-multiply bg-[rgba(0,0,0,0.4)] text-white"
-            style={{ backgroundImage: `url(https://hei.school/wp-content/uploads/2024/09/hei-banner-2.webp)` }}
+        <header
+            className="relative min-h-screen w-screen flex flex-col items-center justify-center text-center gap-14 px-10 bg-cover bg-center bg-blend-multiply text-white transition-all duration-700"
+            style={{
+                backgroundImage: `url(${image})`,
+                backgroundColor: "rgba(0,0,0,0.4)",
+                backgroundBlendMode: "multiply",
+            }}
         >
+            <h1 className="text-7xl font-bold">{title}</h1>
+            <p className="text-lg max-w-5xl">{text}</p>
 
-
-            <h1 className="text-7xl">Haute École d'Informatique</h1>
-            <p className="text-lg max-w-5xl">«&nbsp;L’éducation est l’arme la plus
-                puissante pour changer le monde&nbsp;» selon Nelson Mandela.
-                «&nbsp;L’éducation dans l’informatique est une arme très
-                puissante pour lutter contre la pauvreté à Madagascar&nbsp;»
-                selon HEI. C’est notre mission.</p>
 
             <div className="flex justify-center gap-9">
                 <button className="w-3xs">
-                <span className="bg-white  text-black px-4 py-2 font-bold rounded hover:bg-gray-100 cursor-pointer">Inscrivez-vous ici</span>
+                    <span className="bg-white  text-black px-4 py-2 font-bold rounded hover:bg-gray-100 cursor-pointer">Inscrivez-vous ici</span>
                 </button>
                 <button className="w-3xs">
-                <span className="bg-amber-500  text-white px-4 py-2 font-bold rounded hover:bg-orange-400 cursor-pointer">Emploi du temps</span>
+                    <span className="bg-amber-500  text-white px-4 py-2 font-bold rounded hover:bg-orange-400 cursor-pointer">Emploi du temps</span>
                 </button>
                 <button className="w-3xs">
-                <span className="bg-blue-900  text-white px-4 py-2 font-bold rounded hover:text-gray-100 cursor-pointer">Programme pédagogique</span>
+                    <span className="bg-blue-900  text-white px-4 py-2 font-bold rounded hover:text-gray-100 cursor-pointer">Programme pédagogique</span>
                 </button>
             </div>
-            <p className="absolute bottom-0">Habilitation MESupRES, suivant l’arrêté n°31309/2023</p>
+            <p className="absolute bottom-20">Habilitation MESupRES, suivant l’arrêté n°31309/2023</p>
+
+            <div className="w-screen absolute flex justify-between p-8">
+                <button
+                    onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
+                    className="text-white p-3 rounded-full hover:bg-gray-200 hover:text-black"
+                    >
+                    <ChevronLeft size={42} />
+                </button>
+
+                <button
+                    onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}
+                    className="text-white p-3 rounded-full hover:bg-gray-200 hover:text-black"
+                >
+                    <ChevronRight size={42} />
+                </button>
+            </div>
 
         </header>
     );
