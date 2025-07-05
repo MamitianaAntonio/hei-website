@@ -15,9 +15,15 @@ function Header() {
                 selon HEI. C’est notre mission.</p>
 
             <div className="flex justify-center gap-9">
+                <button className="w-3xs">
                 <span className="bg-white  text-black px-4 py-2 font-bold rounded hover:bg-gray-100 cursor-pointer">Inscrivez-vous ici</span>
+                </button>
+                <button className="w-3xs">
                 <span className="bg-amber-500  text-white px-4 py-2 font-bold rounded hover:bg-orange-400 cursor-pointer">Emploi du temps</span>
+                </button>
+                <button className="w-3xs">
                 <span className="bg-blue-900  text-white px-4 py-2 font-bold rounded hover:text-gray-100 cursor-pointer">Programme pédagogique</span>
+                </button>
             </div>
             <p className="absolute bottom-0">Habilitation MESupRES, suivant l’arrêté n°31309/2023</p>
 
