@@ -1,7 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
-
 function Footer() {
   return (
     <>
@@ -31,7 +27,7 @@ function Footer() {
           <p className="hover:text-amber-400">Inscription</p>
         </div>
         <div className="max-w-50 flex flex-col ">
-          <h3 className="mt-22 text-xl font-semibold">Médias sociaux</h3>
+          <h3 className="mt-22 font-semibold">Médias sociaux</h3>
         </div>
       </div>
       <div>
@@ -44,3 +40,4 @@ function Footer() {
 }
 
 export default Footer;
+
