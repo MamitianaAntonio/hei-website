@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { ChevronRight, ChevronLeft } from "react-feather";
 
-
 const slides = [
     {
         image: "https://hei.school/wp-content/uploads/2024/09/hei-banner-2.webp",
@@ -20,7 +19,11 @@ const slides = [
     },
 ];
 
-const titleButton = ["Inscrivez-vous ici", "Emploi du temps", "Programme pédagogique"];
+const titleButton = [
+  "Inscrivez-vous ici",
+  "Emploi du temps",
+  "Programme pédagogique",
+];
 
 function Header() {
     const [current, setCurrent] = useState(0);
@@ -32,8 +35,7 @@ function Header() {
         return () => clearInterval(interval);
     }, []);
 
-
-    const { image, title, text } = slides[current];
+  const { image, title, text } = slides[current];
 
     return (
         <header
@@ -46,7 +48,6 @@ function Header() {
         >
             <h1 className="text-7xl font-bold">{title}</h1>
             <p className="text-2xl max-w-5xl p-5">{text}</p>
-
 
             <div className="flex justify-center gap-9 my-5">
                 {titleButton.map((button) => {
