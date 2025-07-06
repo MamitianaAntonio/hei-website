@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+
 function Footer() {
     return (
         <>
@@ -24,6 +28,18 @@ function Footer() {
                 </div>
                 <div className="max-w-50 flex flex-col ">
                     <h3 className="mt-22 font-semibold">Médias sociaux</h3>
+
+                    <div className="flex gap-2 mt-3">
+                        <a href="#">
+                            <FontAwesomeIcon icon={faFacebook} size="xl" className="bg-amber-500 p-2 rounded-full" />
+                        </a>
+                        <a href="#">
+                            <FontAwesomeIcon icon={faLinkedin} size="xl" className="bg-amber-500 p-2 rounded-full" />
+                        </a>
+                        <a href="#">
+                            <FontAwesomeIcon icon={faInstagram} size="xl" className="bg-amber-500 p-2 rounded-full" />
+                        </a>
+                    </div>
 
                 </div>
             </div>
