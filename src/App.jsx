@@ -5,6 +5,7 @@ import Opportunities from "./components/Opporturnities";
 import Domains from "./components/Domains";
 import Footer from "./components/Footer";
 import Team from "./components/Team";
+import Partners from "./components/Partners";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Team />
       <Opportunities />
       <Domains />
+      <Partners />
       <Footer />
     </>
   );
