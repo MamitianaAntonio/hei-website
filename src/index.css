@@ -1,13 +1,1 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-
-* {
-  line-height: 2;
-  font-family: "Quicksand", sans-serif;
-}
-
-:root {
-  --hei-white: #ffffff;
-  --hei-blue: #011948;
-  --hei-gold: #dfa408;
-}

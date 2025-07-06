@@ -92,7 +92,7 @@ function Team() {
         </p>
       </div>
 
-      <div className="relative flex items-center justify-between w-full mx-auto">
+      <div className="relative flex items-center justify-between w-full mx-auto overflow-hidden">
         {/* Chevron gauche */}
         <button
           onClick={goToPreviousCard}
@@ -102,12 +102,12 @@ function Team() {
         </button>
 
         {/*Card*/}
-        <div className="flex space-x-4 justify-center items-center w-full px-15">
+        <div className="flex space-x-4 justify-center items-center w-full px-15 overflow-hidden">
           {visibleMembers.map((member, i) => (
             <div
               key={i}
               className={`transition-transform duration-300 ${
-                i === 1 ? "scale-105 z-10" : "scale-95 opacity-70"
+                i === 1 ? "scale-105" : "scale-95 opacity-70"
               }`}
             >
               <ProfileCard {...member} />
