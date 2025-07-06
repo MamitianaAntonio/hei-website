@@ -9,6 +9,7 @@ import Admission from "./components/Admission";
 import "./App.css";
 import Technos from "./components/Technos";
 import Partner from "./components/Partner";
+import Program from "./components/Program";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Opportunities />
       <Domains />
       <Admission />
+      <Program />
       <Technos />
       <Partner />
       <Footer />
