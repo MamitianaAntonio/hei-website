@@ -48,7 +48,7 @@ const technos = [
 function Technos() {
   return (
     <section className="py-16 bg-[#F1F1F1] text-center">
-      <h2 className="text-4xl font-bold text-blue-900 mb-4">
+      <h2 className="text-4xl font-bold text-[var(--hei-blue)] mb-4">
         Les technos et langages utilisés
       </h2>
       <p className="text-blue-900 max-w-4xl mx-auto mb-12">
@@ -60,7 +60,6 @@ function Technos() {
       </p>
 
       <div className="flex flex-col items-center space-y-8">
-        {/* Ligne 1 : 5 images */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
           {technos.slice(0, 5).map((tech, index) => (
             <img
@@ -72,7 +71,6 @@ function Technos() {
           ))}
         </div>
 
-        {/* Ligne 2 : 6 images */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
           {technos.slice(5).map((tech, index) => (
             <img
