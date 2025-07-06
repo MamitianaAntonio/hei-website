@@ -8,6 +8,7 @@ import Team from "./components/Team";
 import Admission from "./components/Admission";
 import "./App.css";
 import Technos from "./components/Technos";
+import Partner from "./components/Partner";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Domains />
       <Admission />
       <Technos />
+      <Partner />
       <Footer />
     </>
   );

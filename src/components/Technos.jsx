@@ -47,7 +47,7 @@ const technos = [
 
 function Technos() {
   return (
-    <section className="py-16 bg-gray-50 text-center">
+    <section className="py-16 bg-[#F1F1F1] text-center">
       <h2 className="text-4xl font-bold text-blue-900 mb-4">
         Les technos et langages utilisés
       </h2>
