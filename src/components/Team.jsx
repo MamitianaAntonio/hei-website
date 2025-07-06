@@ -76,12 +76,12 @@ function Team() {
 
   return (
     <div className="flex flex-col items-center w-auto bg-gray-200 p-10">
-      <h1 className="text-5xl font-bold text-var[var(hei-blue)]">
+      <h1 className="text-5xl font-bold text-[var(--hei-blue)]">
         L'équipe pédagogique
       </h1>
 
       <div className="p-10 w-2/3 text-center leading-7">
-        <p>
+        <p className="text-[var(--hei-blue)]">
           Notre équipe pédagogique se compose d’experts nationaux et
           internationaux de l’informatique, de la cybersécurité, de
           l’intelligence artificielle, dont un ingénieur chez Google. Ils sont
@@ -93,7 +93,7 @@ function Team() {
       </div>
 
       <div className="relative flex items-center justify-between w-full mx-auto overflow-hidden">
-        {/* Chevron gauche */}
+        {/* Left chevron */}
         <button
           onClick={goToPreviousCard}
           className="absolute left-0 bg-white shadow-md p-3 rounded-full hover:bg-gray-200 transition z-20"

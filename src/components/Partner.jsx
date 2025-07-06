@@ -13,7 +13,9 @@ const partenaires = [
 function Partner() {
   return (
     <section className="py-16 text-center bg-white">
-      <h2 className="text-4xl font-bold text-blue-900 mb-4">Nos partenaires</h2>
+      <h2 className="text-4xl font-bold text-[var(--hei-blue)] mb-4">
+        Nos partenaires
+      </h2>
       <p className="text-blue-900 max-w-4xl mx-auto mb-12">
         L’employabilité de nos étudiants se base sur la pertinence de notre
         programme pédagogique et de la composition de notre corps enseignant,

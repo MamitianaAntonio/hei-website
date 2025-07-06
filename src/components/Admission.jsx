@@ -1,5 +1,3 @@
-import { ChevronRight } from "react-feather";
-
 const steps = [
   {
     id: "01",
@@ -45,13 +43,6 @@ function Admission() {
                 {step.description}
               </p>
             </div>
-
-            {/* Arrow */}
-            {index < steps.length - 1 && (
-              <div className="hidden md:block absolute right-[-18px] top-1/2 transform -translate-y-1/2">
-                <ChevronRight size={32} color="#fff" />
-              </div>
-            )}
           </div>
         ))}
       </div>
