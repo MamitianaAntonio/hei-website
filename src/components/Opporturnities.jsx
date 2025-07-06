@@ -1,4 +1,4 @@
-function opportunities() {
+function Opportunities() {
     return (
         <div>
             <div className="flex items-center p-10 justify-center gap-9">
@@ -27,4 +27,4 @@ function opportunities() {
     );
 }
 
-export default opportunities;
+export default Opportunities;
