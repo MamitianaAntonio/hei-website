@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Team from "./components/Team";
 import Admission from "./components/Admission";
 import "./App.css";
+import Technos from "./components/Technos";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Opportunities />
       <Domains />
       <Admission />
+      <Technos />
       <Footer />
     </>
   );
