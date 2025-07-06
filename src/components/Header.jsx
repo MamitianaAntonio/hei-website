@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { ChevronRight, ChevronLeft } from "react-feather";
 
-
 const slides = [
   {
     image: "https://hei.school/wp-content/uploads/2024/09/hei-banner-2.webp",
@@ -20,7 +19,11 @@ const slides = [
   },
 ];
 
-const titleButton = ["Inscrivez-vous ici", "Emploi du temps", "Programme pédagogique"];
+const titleButton = [
+  "Inscrivez-vous ici",
+  "Emploi du temps",
+  "Programme pédagogique",
+];
 
 function Header() {
   const [current, setCurrent] = useState(0);
@@ -31,7 +34,6 @@ function Header() {
     }, 8000);
     return () => clearInterval(interval);
   }, []);
-
 
   const { image, title, text } = slides[current];
 
@@ -47,21 +49,26 @@ function Header() {
       <h1 className="text-7xl font-bold">{title}</h1>
       <p className="text-2xl max-w-5xl p-5">{text}</p>
 
-
       <div className="flex justify-center gap-9 my-5">
         {titleButton.map((button) => {
           return (
             <button className="w-3xs">
-              <span className="bg-white text-black px-4 py-4 font-bold rounded hover:bg-gray-100 cursor-pointer">{button}</span>
+              <span className="bg-white text-black px-4 py-4 font-bold rounded hover:bg-gray-100 cursor-pointer">
+                {button}
+              </span>
             </button>
           );
         })}
       </div>
-      <p className="text-xl relative top-10">Habilitation MESupRES, suivant l’arrêté n°31309/2023</p>
+      <p className="text-xl relative top-10">
+        Habilitation MESupRES, suivant l’arrêté n°31309/2023
+      </p>
 
       <div className="w-screen absolute flex justify-between p-8">
         <button
-          onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
+          onClick={() =>
+            setCurrent((prev) => (prev - 1 + slides.length) % slides.length)
+          }
           className="text-white p-3 rounded-full hover:bg-gray-200 hover:text-black"
         >
           <ChevronLeft size={42} />
@@ -74,7 +81,6 @@ function Header() {
           <ChevronRight size={42} />
         </button>
       </div>
-
     </header>
   );
 }
